@@ -1,0 +1,6 @@
+{
+  "name": "TRINETRA X: Autonomous Cyber Deception Platform",
+  "description": "Modern, enterprise-grade dark-mode landing page and interactive deception architecture showcase for TRINETRA X, an autonomous cyber deception and active threat neutralization platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
