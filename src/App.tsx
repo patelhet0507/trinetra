@@ -10,6 +10,11 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ThreatGlobe } from './components/ThreatGlobe';
 import { TrafficTerminal } from './components/TrafficTerminal';
+import { ForensicSessionReplay } from './components/ForensicSessionReplay';
+import { MitreDeceptionMatrix } from './components/MitreDeceptionMatrix';
+import { DecoyOrchestrator } from './components/DecoyOrchestrator';
+import { KernelBenchmarkCalculator } from './components/KernelBenchmarkCalculator';
+import { IocExportCenter } from './components/IocExportCenter';
 import { ParadigmShift } from './components/ParadigmShift';
 import { EnterpriseSecurity } from './components/EnterpriseSecurity';
 import { Footer } from './components/Footer';
@@ -57,10 +62,25 @@ export default function App() {
           </div>
         </section>
 
-        {/* 2. Traditional Blocking vs Active Deception & 3 Simple Steps */}
+        {/* 2. Interactive Decoy Session Replay & Forensics */}
+        <ForensicSessionReplay />
+
+        {/* 3. MITRE ATT&CK Deception Matrix */}
+        <MitreDeceptionMatrix />
+
+        {/* 4. Decoy Fleet Orchestrator & Canary Builder */}
+        <DecoyOrchestrator />
+
+        {/* 5. In-Kernel eBPF Performance Benchmark Calculator */}
+        <KernelBenchmarkCalculator />
+
+        {/* 6. Ground-Truth IOC Feed & SIEM Exporter */}
+        <IocExportCenter />
+
+        {/* 7. Traditional Blocking vs Active Deception & 3 Simple Steps */}
         <ParadigmShift />
 
-        {/* 3. Safety Guarantees & Production Isolation */}
+        {/* 8. Safety Guarantees & Production Isolation */}
         <EnterpriseSecurity />
 
         {/* 4. Simple Call-to-Action Section */}

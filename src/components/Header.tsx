@@ -26,10 +26,12 @@ export const Header: React.FC<HeaderProps> = ({ onRequestDemo, onOpenDocs, onLau
   }, []);
 
   const navLinks = [
-    { name: 'How It Works', href: '#how-it-works' },
-    { name: 'Interactive Demo', href: '#demo' },
-    { name: 'Comparison', href: '#comparison' },
-    { name: 'Safety & Isolation', href: '#security' },
+    { name: 'Telemetry', href: '#telemetry-suite' },
+    { name: 'Forensics', href: '#forensic-replay' },
+    { name: 'MITRE Matrix', href: '#mitre-matrix' },
+    { name: 'Canary Builder', href: '#decoy-orchestrator' },
+    { name: 'eBPF Benchmarks', href: '#kernel-benchmark' },
+    { name: 'IOC Feed', href: '#ioc-export' },
   ];
 
   return (
