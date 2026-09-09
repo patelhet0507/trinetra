@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { Shield, ArrowRight, BookOpen } from 'lucide-react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { ThreatGlobe } from './components/ThreatGlobe';
 import { TrafficTerminal } from './components/TrafficTerminal';
 import { ParadigmShift } from './components/ParadigmShift';
 import { EnterpriseSecurity } from './components/EnterpriseSecurity';
@@ -41,8 +42,20 @@ export default function App() {
           onViewArchitecture={() => handleOpenDocs('whitepaper')}
         />
 
-        {/* Live Kernel Splicing & Decoy Telemetry Terminal */}
-        <TrafficTerminal />
+        {/* Real-Time Cyber Telemetry: 3D Threat Globe & Kernel Splicing Terminal */}
+        <section id="telemetry-suite" className="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
+            {/* 3D Wireframe Interactive Threat Globe */}
+            <div className="lg:col-span-6 flex flex-col h-full">
+              <ThreatGlobe />
+            </div>
+
+            {/* Live Kernel Decoy Splicing Terminal */}
+            <div className="lg:col-span-6 flex flex-col h-full">
+              <TrafficTerminal className="w-full h-full flex flex-col" />
+            </div>
+          </div>
+        </section>
 
         {/* 2. Traditional Blocking vs Active Deception & 3 Simple Steps */}
         <ParadigmShift />

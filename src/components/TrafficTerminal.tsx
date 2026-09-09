@@ -144,7 +144,11 @@ const STREAM_POOL: Omit<LogEntry, 'id' | 'timestamp'>[] = [
   },
 ];
 
-export const TrafficTerminal: React.FC = () => {
+export interface TrafficTerminalProps {
+  className?: string;
+}
+
+export const TrafficTerminal: React.FC<TrafficTerminalProps> = ({ className }) => {
   const [logs, setLogs] = useState<LogEntry[]>(INITIAL_LOGS);
   const [isPaused, setIsPaused] = useState(false);
   const [splicedCount, setSplicedCount] = useState(1482);
@@ -232,12 +236,12 @@ export const TrafficTerminal: React.FC = () => {
   };
 
   return (
-    <section
+    <div
       id="live-traffic-terminal"
-      className="w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8"
+      className={className || "w-full max-w-5xl mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8"}
     >
       {/* Retro-cyber terminal container */}
-      <div className="bg-[#070b12] border border-white/[0.12] rounded-xl shadow-2xl overflow-hidden font-mono text-slate-300">
+      <div className="bg-[#070b12] border border-white/[0.12] rounded-xl shadow-2xl overflow-hidden font-mono text-slate-300 h-full flex flex-col">
         
         {/* Terminal Header Bar */}
         <div className="bg-[#0d131f] px-3 sm:px-4 py-2 sm:py-2.5 border-b border-white/[0.08] flex items-center justify-between select-none gap-2">
@@ -298,7 +302,7 @@ export const TrafficTerminal: React.FC = () => {
         {/* Terminal Scrolling Log Body */}
         <div
           ref={logContainerRef}
-          className="h-52 sm:h-64 overflow-y-auto overflow-x-hidden p-2.5 sm:p-4 space-y-2 bg-[#06090e]/95 scroll-smooth border-b border-white/[0.06] text-[10px] sm:text-xs leading-relaxed"
+          className="flex-1 min-h-[300px] sm:min-h-[340px] max-h-[460px] overflow-y-auto overflow-x-hidden p-2.5 sm:p-4 space-y-2 bg-[#06090e]/95 scroll-smooth border-b border-white/[0.06] text-[10px] sm:text-xs leading-relaxed"
           style={{
             backgroundImage:
               'linear-gradient(rgba(16, 185, 129, 0.02) 50%, rgba(0, 0, 0, 0.25) 50%)',
@@ -382,6 +386,6 @@ export const TrafficTerminal: React.FC = () => {
         </div>
 
       </div>
-    </section>
+    </div>
   );
 };
